@@ -2,6 +2,7 @@
 
 Difference from base layout: 
  * split backspace
- * blocker bottom row
- * HHKB Fn layer on Up key when held
- * lights layer on left Ctrl
+ * 7u blocker bottom row
+ * MO(1): HHKB fn layer - shift row far right column
+ * MO(2): lights control layer - bottom row far left
+ * Reset: MO(1) + R
