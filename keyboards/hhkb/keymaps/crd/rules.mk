@@ -1,0 +1,2 @@
+HHKB_RN42_ENABLE = yes
+
