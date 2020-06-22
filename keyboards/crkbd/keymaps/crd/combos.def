@@ -1,0 +1,4 @@
+COMB(erTab,    KC_TAB,          KC_E, KC_R)
+COMB(weGrv,    KC_GRV,          KC_W, KC_E)
+COMB(asEsc,    KC_ESC,          KC_A, KC_S)
+COMB(klEnt,    KC_ENT,          KC_K, KC_L)
