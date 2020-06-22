@@ -1,0 +1,2 @@
+COMB(gtTab,    KC_TAB,          KC_G, KC_T)
+COMB(frGrv,    KC_GRV,          KC_F, KC_R)
