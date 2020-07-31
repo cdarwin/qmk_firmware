@@ -2,3 +2,5 @@
 #define COMBO_VARIABLE_LEN
 #undef DEBOUNCE
 #define DEBOUNCE 10
+#undef TAPPING_TERM
+#define TAPPING_TERM 200

@@ -1,6 +1,7 @@
 #include QMK_KEYBOARD_H
 #include "g/keymap_combo.h"
 
+#define KC_CTSL RCTL_T(KC_SCLN)
 #define KC_LSHZ SFT_T(KC_Z)
 #define KC_SHSL RSFT_T(KC_SLSH)
 #define KC_SPM1 LT(1, KC_SPC)
@@ -15,7 +16,7 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [0] = LAYOUT_gergoplex(
        KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,     KC_P,
-       KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,  KC_SCLN,
+       KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,  KC_CTSL,
     KC_LSHZ,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M, KC_COMM,  KC_DOT,  KC_SHSL,
     /*             */ KC_CLBS, KC_GUEN, KC_BSM1, KC_SPM1, KC_ALTA, KC_CLGV),
 [1] = LAYOUT_gergoplex(
