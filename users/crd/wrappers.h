@@ -33,6 +33,6 @@
 #define _____________3x5_____SYM_L2________________     KC_LT, KC_LCBR, KC_LBRC, KC_LPRN, KC_UNDS
 #define _____________3x5_____SYM_L3________________   XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, KC_TILD
 
-#define _____________3x5_____SYM_R1________________   KC_QUOT, XXXXXXX, XXXXXXX, XXXXXXX,   RESET
+#define _____________3x5_____SYM_R1________________   KC_DQUO, XXXXXXX, XXXXXXX, XXXXXXX,   RESET
 #define _____________3x5_____SYM_R2________________   KC_PLUS, KC_RPRN, KC_RBRC, KC_RCBR,   KC_GT
 #define _____________3x5_____SYM_R3________________   KC_PIPE, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
