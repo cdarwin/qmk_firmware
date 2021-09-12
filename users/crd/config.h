@@ -1,6 +1,13 @@
 #pragma once
-#define USE_SERIAL
-#define MASTER_LEFT
+
+
+#if defined(SPLIT_KEYBOARD)
+    #define MASTER_LEFT
+#endif
+
+#if defined(KEYBOARD_handwired_dactyl_manuform_4x5)
+    #define USE_SERIAL
+#endif
 
 // Configure the global tapping term (default: 200ms)
 #define TAPPING_TERM 200
