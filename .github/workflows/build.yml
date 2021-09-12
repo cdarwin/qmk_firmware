@@ -11,9 +11,9 @@ jobs:
       fail-fast: false
       matrix:
         keyboard:
-          - atreus
+          - reviung34
         keymap:
-          - default
+          - crd
 
     steps:
       - uses: actions/checkout@v2
