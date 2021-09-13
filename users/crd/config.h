@@ -2,6 +2,7 @@
 
 
 #if defined(SPLIT_KEYBOARD)
+    #undef MASTER_RIGHT
     #define MASTER_LEFT
 #endif
 

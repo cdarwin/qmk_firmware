@@ -25,6 +25,8 @@
 
 // Convenient Shortcuts
 #define CTL_ESC LCTL_T(KC_ESC)
+#define ZM_MUTE LSG(KC_A)
+#define ZM_VMUT LSG(KC_V)
 #define DC_NXT LSA(KC_DOWN)
 #define DC_PRV LSA(KC_UP)
 #define IJ_BCK LGUI(KC_LBRC)
