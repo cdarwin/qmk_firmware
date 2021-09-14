@@ -14,6 +14,7 @@ jobs:
           - reviung34
           - handwired/dactyl_manuform/4x5
           - bastardkb/tbkmini
+          - splitkb/kyria
         keymap:
           - crd
 
