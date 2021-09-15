@@ -1,5 +1,51 @@
-#pragma once
-#include "crd.h"
+// Thumbs
+#define KC_BSM1 LT(1, KC_BSPC)
+#define KC_SPM2 LT(2, KC_SPC)
+#define KC_ENM3 LT(3, KC_ENT)
+#define KC_TAM3 LT(3, KC_TAB)
+
+// Left-hand home row mods
+#define CTL_A LCTL_T(KC_A)
+#define ALT_S LALT_T(KC_S)
+#define GUI_D LGUI_T(KC_D)
+#define SFT_F LSFT_T(KC_F)
+#define L2_V LT(2, KC_V)
+#define L2_M LT(2, KC_M)
+
+// Right-hand home row mods
+#define SFT_J RSFT_T(KC_J)
+#define GUI_K RGUI_T(KC_K)
+#define ALT_L LALT_T(KC_L)
+#define CTL_SCL RCTL_T(KC_SCLN)
+
+// Convenient Shortcuts
+#define CTL_ESC LCTL_T(KC_ESC)
+#define ZM_MUTE LSG(KC_A)
+#define ZM_VMUT LSG(KC_V)
+#define DC_NXT LSA(KC_DOWN)
+#define DC_PRV LSA(KC_UP)
+#define IJ_BCK LGUI(KC_LBRC)
+#define IJ_FWD LGUI(KC_RBRC)
+
+/* Layout Wrappers */
+#define LAYOUT_wrapper(...)       LAYOUT(__VA_ARGS__)
+
+#define LAYOUT_split_3x6_3_wrapper(...)       LAYOUT_split_3x6_3(__VA_ARGS__)
+#define LAYOUT_split_3x6_3_base( \
+  L01, L02, L03, L04, L05,           R00, R01, R02, R03, R04, \
+  L11, L12, L13, L14, L15,           R10, R11, R12, R13, R14, \
+  L21, L22, L23, L24, L25,           R20, R21, R22, R23, R24, \
+                 L30, L31, L32, R30, R31, R32 \
+  ) \
+  LAYOUT_split_3x6_3_wrapper( \
+   KC_TAB, L01, L02, L03, L04, L05,           R00, R01, R02, R03, R04, KC_BSPC, \
+  KC_GESC, L11, L12, L13, L14, L15,           R10, R11, R12, R13, R14,  KC_ENT, \
+  KC_LSFT, L21, L22, L23, L24, L25,           R20, R21, R22, R23, R24, KC_RSFT, \
+                          L30, L31, L32, R30, R31, R32 \
+  )
+#define LAYOUT_split_3x6_3_base_wrapper(...)       LAYOUT_split_3x6_3_base(__VA_ARGS__)
+
+#define LAYOUT_reviung34_wrapper(...)                  LAYOUT_reviung34(__VA_ARGS__)
 
 /* Base Layers */
 #define _____________3x5_QWERTY_L1_________________      KC_Q,    KC_W,    KC_E,    KC_R,    KC_T

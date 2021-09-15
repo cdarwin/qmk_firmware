@@ -5,18 +5,14 @@ on:
       - '**.md'
 
 jobs:
-  build:
+  build-make:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         keyboard:
-          - reviung34
           - handwired/dactyl_manuform/4x5
-          - bastardkb/tbkmini
           - splitkb/kyria
-          - crkbd
-          - ferris/0_1
         keymap:
           - crd
 
@@ -38,6 +34,49 @@ jobs:
 
           sed -i 's/run --rm -it/run --rm/' util/docker_build.sh
           util/docker_build.sh ${TARGET}
+
+          ls
+
+          echo ::set-output name=artifact-name::${TARGET//[:<>|*?\\\/]/_}
+          echo "Artifact-name: ${{ steps.build.outputs.artifact-name }}"
+
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: "${{ steps.build.outputs.artifact-name }}"
+          path: |
+            *.hex
+            *.bin
+        continue-on-error: true
+  build-cli:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        keymap:
+          - reviung34
+          - tbkmini
+          - crkbd
+          - ferris_0_1
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+          submodules: true
+
+      - name: Build
+        id: build
+        run: |
+          TARGET="${{ matrix.keymap }}"
+
+          docker run --rm \
+            -w /qmk_firmware \
+            -v "$dir":/qmk_firmware \
+            -e ALT_GET_KEYBOARDS=true \
+            qmkfm/base_container \
+            qmk compile -c users/crd/keymaps/${TARGET}.json
 
           ls
 
