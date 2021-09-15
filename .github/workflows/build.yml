@@ -75,7 +75,7 @@ jobs:
             -w /qmk_firmware \
             -v "$dir":/qmk_firmware \
             -e ALT_GET_KEYBOARDS=true \
-            qmkfm/base_container \
+            qmkfm/qmk_cli \
             qmk compile -c users/crd/keymaps/${TARGET}.json
 
           ls
