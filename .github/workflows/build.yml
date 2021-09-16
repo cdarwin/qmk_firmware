@@ -5,48 +5,6 @@ on:
       - '**.md'
 
 jobs:
-  build-make:
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        keyboard:
-          - handwired/dactyl_manuform/4x5
-        keymap:
-          - crd
-
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 1
-          persist-credentials: false
-          submodules: true
-
-      - name: Build
-        id: build
-        run: |
-          TARGET="${{ matrix.keyboard }}"
-
-          if [ -n "${{ matrix.keymap }}" ]; then
-             TARGET="${TARGET}:${{ matrix.keymap }}"
-          fi
-
-          sed -i 's/run --rm -it/run --rm/' util/docker_build.sh
-          util/docker_build.sh ${TARGET}
-
-          ls
-
-          echo ::set-output name=artifact-name::${TARGET//[:<>|*?\\\/]/_}
-          echo "Artifact-name: ${{ steps.build.outputs.artifact-name }}"
-
-      - name: Archive artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: "${{ steps.build.outputs.artifact-name }}"
-          path: |
-            *.hex
-            *.bin
-        continue-on-error: true
   build-cli:
     runs-on: ubuntu-latest
     strategy:
@@ -58,6 +16,7 @@ jobs:
           - crkbd
           - ferris_0_1
           - kyria
+          - dacmani
 
     steps:
       - uses: actions/checkout@v2
@@ -89,8 +48,6 @@ jobs:
             -e ALT_GET_KEYBOARDS=true \
             qmkfm/qmk_cli \
             /usr/local/bin/qmk compile -c users/crd/keymaps/${TARGET}.json
-
-          ls
 
           echo ::set-output name=artifact-name::${TARGET//[:<>|*?\\\/]/_}
           echo "Artifact-name: ${{ steps.build.outputs.artifact-name }}"
