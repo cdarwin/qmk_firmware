@@ -30,6 +30,8 @@
 /* Layout Wrappers */
 #define LAYOUT_wrapper(...)       LAYOUT(__VA_ARGS__)
 
+#define LAYOUT_reviung34_wrapper(...)                  LAYOUT_reviung34(__VA_ARGS__)
+
 #define LAYOUT_split_3x6_3_wrapper(...)       LAYOUT_split_3x6_3(__VA_ARGS__)
 #define LAYOUT_split_3x6_3_base( \
   L01, L02, L03, L04, L05,           R00, R01, R02, R03, R04, \
@@ -45,7 +47,19 @@
   )
 #define LAYOUT_split_3x6_3_base_wrapper(...)       LAYOUT_split_3x6_3_base(__VA_ARGS__)
 
-#define LAYOUT_reviung34_wrapper(...)                  LAYOUT_reviung34(__VA_ARGS__)
+#define LAYOUT_kyria_base( \
+    K01, K02, K03, K04, K05, K06, K07, K08, K09, K0A, \
+    K11, K12, K13, K14, K15, K16, K17, K18, K19, K1A, \
+    K21, K22, K23, K24, K25, K26, K27, K28, K29, K2A, \
+    K31, K32, K33, K34, K35, K36 \
+  ) \
+  LAYOUT_wrapper( \
+       KC_TAB, K01, K02, K03, K04, K05,                                           K06, K07, K08, K09, K0A, KC_BSPC, \
+      KC_GESC, K11, K12, K13, K14, K15,                                           K16, K17, K18, K19, K1A,  KC_ENT, \
+      KC_LSFT, K21, K22, K23, K24, K25, XXXXXXX, XXXXXXX, /* */ XXXXXXX, XXXXXXX, K26, K27, K28, K29, K2A, KC_RSFT, \
+                         KC_MPLY, XXXXXXX, K31, K32, K33, /* */ K34, K35, K36, XXXXXXX, KC_MUTE \
+    )
+#define LAYOUT_kyria_base_wrapper(...)       LAYOUT_kyria_base(__VA_ARGS__)
 
 /* Base Layers */
 #define _____________3x5_QWERTY_L1_________________      KC_Q,    KC_W,    KC_E,    KC_R,    KC_T

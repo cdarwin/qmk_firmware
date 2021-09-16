@@ -12,7 +12,6 @@ jobs:
       matrix:
         keyboard:
           - handwired/dactyl_manuform/4x5
-          - splitkb/kyria
         keymap:
           - crd
 
@@ -58,6 +57,7 @@ jobs:
           - tbkmini
           - crkbd
           - ferris_0_1
+          - kyria
 
     steps:
       - uses: actions/checkout@v2

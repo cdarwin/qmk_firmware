@@ -24,6 +24,7 @@
         #define RGBLIGHT_LIMIT_VAL 150
     #endif
     #ifdef ENCODER_ENABLE
+        #include "encoders.c"
         #define ENCODER_DIRECTION_FLIP
         #define ENCODER_RESOLUTION 2
     #endif
