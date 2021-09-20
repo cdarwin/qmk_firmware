@@ -25,6 +25,14 @@
     #endif
 #endif
 
+#if defined(KEYBOARD_jd45)
+#   ifdef ENCODER_ENABLE
+#       define ENCODERS_PAD_A { F6, D3, B2 }
+#       define ENCODERS_PAD_B { F7, B1, B3 }
+#       define ENCODER_RESOLUTION 2
+#   endif
+#endif
+
 #define TAPPING_TERM 200
 #define IGNORE_MOD_TAP_INTERRUPT
 // #define TAPPING_FORCE_HOLD

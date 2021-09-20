@@ -17,6 +17,7 @@ jobs:
           - ferris_0_1
           - kyria
           - dacmani
+          - jd45
 
     steps:
       - uses: actions/checkout@v2
