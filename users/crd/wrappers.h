@@ -81,19 +81,19 @@ K20, K21, K22, K23, K24,                         K25, K26, K27, K28, K29,\
          k31, k32,                    k36,            k39, k3a       \
 ) \
 LAYOUT_wrapper( \
-    KC_TAB, LT(2,k01), k02, k03, k04, k05, k06, k07, k08, k09, LT(2,k0a), KC_BSPC, k0c, \
-    KC_GESC, k11, k12, k13, k14, k15, k16, k17, k18, k19, k1a,     KC_ENT, \
-    KC_LSFT,    k21, k22, k23, k24, k25, k26, k27, k28, k29, k2a,   KC_RSFT, \
+    LT(2,k01), k02, k03, k04, k05, XXX, XXX, k06, k07, k08, k09, LT(2,k0a), k0c, \
+    k11,        k12, k13, k14, k15, XXX, XXX, k16, k17, k18, k19,      k1a, \
+    k21,          k22, k23, k24, k25, XXX, XXX, k26, k27, k28, k29,    k2a, \
     XXX, k31, k32, XXX,      XXX,     k36,       XXX, k39, k3a, XXX  \
 )
 #define LAYOUT_jd45_base_wrapper(...)       LAYOUT_jd45_base(__VA_ARGS__)
 
 /* Base Layers */
-#define _____________3x5_QWERTY_L1_________________      KC_Q,    KC_W,    KC_E,    KC_R,    KC_T
+#define _____________3x5_QWERTY_L1_________________      LT(2,KC_Q),    KC_W,    KC_E,    KC_R,    KC_T
 #define _____________3x5_QWERTY_L2_________________      KC_A,    KC_S,    KC_D,    KC_F,    KC_G
 #define _____________3x5_QWERTY_L3_________________      KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
 
-#define _____________3x5_QWERTY_R1_________________      KC_Y,    KC_U,    KC_I,    KC_O,    KC_P
+#define _____________3x5_QWERTY_R1_________________      KC_Y,    KC_U,    KC_I,    KC_O,    LT(2,KC_P)
 #define _____________3x5_QWERTY_R2_________________      KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN
 #define _____________3x5_QWERTY_R3_________________      KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH
 
