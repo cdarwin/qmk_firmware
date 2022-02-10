@@ -81,12 +81,26 @@ K20, K21, K22, K23, K24,                         K25, K26, K27, K28, K29,\
          k31, k32,                    k36,            k39, k3a       \
 ) \
 LAYOUT_wrapper( \
-    LT(2,k01), k02, k03, k04, k05, XXX, XXX, k06, k07, k08, k09, LT(2,k0a), k0c, \
-    k11,        k12, k13, k14, k15, XXX, XXX, k16, k17, k18, k19,      k1a, \
-    k21,          k22, k23, k24, k25, XXX, XXX, k26, k27, k28, k29,    k2a, \
+      KC_TAB, LT(2,k01), k02, k03, k04, k05, k06, k07, k08, k09, LT(2,k0a),  KC_BSPC, k0c, \
+     KC_GESC, k11,        k12, k13, k14, k15, k16, k17, k18, k19,       k1a,  KC_ENT,       \
+     KC_LSFT, k21,          k22, k23, k24, k25, k26, k27, k28, k29,     k2a, KC_RSFT,      \
     XXX, k31, k32, XXX,      XXX,     k36,       XXX, k39, k3a, XXX  \
 )
 #define LAYOUT_jd45_base_wrapper(...)       LAYOUT_jd45_base(__VA_ARGS__)
+
+#define LAYOUT_prime_e_base( \
+	      K001, K002, K003, K004, K005,  		K006, K007, K008, K009, K010,             \
+	      K101, K102, K103, K104, K105,  		K106, K107, K108, K109, K110,       \
+	      K201, K202, K203, K204, K205,  		      K207, K208, K209, K210, K211,       \
+	             			      K304,  		K306       				           \
+) \
+LAYOUT( \
+	 KC_TAB, K001, K002, K003, K004, K005,  		K006, K007, K008, K009, K010, KC_BSPC, KC_DEL, \
+	KC_GESC, K101, K102, K103, K104, K105,  		K106, K107, K108, K109, K110, KC_ENT, \
+	KC_LSFT, K201, K202, K203, K204, K205,  		 XXX, K207, K208, K209, K210, K211, KC_RSFT, \
+	KC_LCTL, KC_LOPT,  	    KC_LCMD, K304,  		K306, KC_LOPT, 			   KC_LCMD, KC_LCTL \
+)
+#define LLAYOUT_prime_e_wrapper(...)       LAYOUT_prime_e_base(__VA_ARGS__)
 
 /* Base Layers */
 #define _____________3x5_QWERTY_L1_________________      LT(2,KC_Q),    KC_W,    KC_E,    KC_R,    KC_T
