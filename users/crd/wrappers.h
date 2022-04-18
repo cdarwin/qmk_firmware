@@ -134,7 +134,7 @@ LAYOUT( \
 #define _____________3x5_____NUM_L2________________    KC_ESC,    KC_4,    KC_5,    KC_6, KC_MINS
 #define _____________3x5_____NUM_L3________________    KC_DOT,    KC_1,    KC_2,    KC_3,  KC_GRV
 
-#define _____________3x5_____NUM_R1________________   KC_QUOT, G(KC_X), G(KC_C), G(KC_V), XXXXXXX
+#define _____________3x5_____NUM_R1________________   KC_QUOT, LSG(KC_A), LSG(KC_V), LSG(KC_S), XXXXXXX
 #define _____________3x5_____NUM_R2________________    KC_EQL, KC_LSFT, KC_LGUI, KC_LALT, CTL_ESC
 #define _____________3x5_____NUM_R3________________   KC_BSLS,  DC_NXT,  IJ_BCK,  IJ_FWD,  DC_PRV
 
