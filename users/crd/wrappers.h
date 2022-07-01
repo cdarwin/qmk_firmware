@@ -102,6 +102,22 @@ LAYOUT( \
 )
 #define LLAYOUT_prime_e_wrapper(...)       LAYOUT_prime_e_base(__VA_ARGS__)
 
+
+#define LAYOUT_hhkb_base( \
+    K01, K02, K13, K12, K23, K22, K42, K43, K62, K63, \
+    K04, K03, K14, K15, K24, K25, K45, K44, K65, K64, \
+    K05, K06, K07, K16, K17, K26, K46, K66, K76, K75, \
+    K37 \
+) \
+LAYOUT( \
+    KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_EQL, KC_BSLS, KC_GRV, \
+    KC_TAB, K01, K02, K13, K12, K23, K22, K42, K43, K62, K63, KC_LBRC, KC_RBRC, KC_BSPC, \
+    KC_LCTL, K04, K03, K14, K15, K24, K25, K45, K44, K65, K64, KC_QUOT, KC_ENT, \
+    KC_LSFT, K05, K06, K07, K16, K17, K26, K46, K66, K76, K75, KC_RSFT, MO(1), \
+    KC_LALT, KC_LGUI, /*        */ K37, KC_RGUI, KC_RALT \
+)
+#define LAYOUT_hhkb_base_wrapper(...) LAYOUT_hhkb_base(__VA_ARGS__)
+
 /* Base Layers */
 #define _____________3x5_QWERTY_L1_________________      LT(2,KC_Q),    KC_W,    KC_E,    KC_R,    KC_T
 #define _____________3x5_QWERTY_L2_________________      KC_A,    KC_S,    KC_D,    KC_F,    KC_G
