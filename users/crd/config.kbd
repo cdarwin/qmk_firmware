@@ -1,3 +1,4 @@
+;; sudo /Users/crd/usr/local/bin/kmonad /Users/crd/workspace/github.com/qmk/qmk_firmware/users/crd/config.kbd
 (defcfg
   ;; For Linux
   ;; input  (device-file "/dev/input/by-id/usb-04d9_daskeyboard-event-kbd")
@@ -8,7 +9,7 @@
   ;; output (send-event-sink)
 
   ;; For MacOS
-  input  (iokit-name)
+  input  (iokit-name "Apple Internal Keyboard / Trackpad")
   output (kext)
 
   ;; This option tells KMonad to let non-configured keys act normal
