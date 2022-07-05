@@ -118,6 +118,21 @@ LAYOUT( \
 )
 #define LAYOUT_hhkb_base_wrapper(...) LAYOUT_hhkb_base(__VA_ARGS__)
 
+#define LAYOUT_alice_base( \
+    k12, k13, k14, k15, k16, k17, k18, k19, k1a, k1b, \
+    k22, k23, k24, k25, k26, k27, k28, k29, k2a, k2b, \
+    k32, k33, k34, k35, k36, k38, k39, k3a, k3b, k3c, \
+    k45, k48  \
+) \
+LAYOUT( \
+RGB_TOG, KC_ESC,  KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_BSLS,  KC_GRV, \
+RGB_MOD, KC_TAB,  k12, k13, k14, k15, k16, k17, k18, k19, k1a, k1b,    KC_LBRC, KC_RBRC, KC_BSPC, \
+RGB_RMOD, KC_LCTL, k22, k23, k24, k25, k26, k27, k28, k29, k2a, k2b, KC_QUOT,          KC_ENT, \
+KC_LSFT, k32, k33, k34, k35, k36, MO(2), k38, k39, k3a, k3b, k3c, KC_RSFT, MO(1), \
+KC_LCTL,    KC_LGUI, k45, MO(2),     k48,       KC_RALT,                   KC_RCTRL \
+)
+#define LAYOUT_alice_base_wrapper(...) LAYOUT_alice_base(__VA_ARGS__)
+
 /* Base Layers */
 #define _____________3x5_QWERTY_L1_________________      LT(2,KC_Q),    KC_W,    KC_E,    KC_R,    KC_T
 #define _____________3x5_QWERTY_L2_________________      KC_A,    KC_S,    KC_D,    KC_F,    KC_G
