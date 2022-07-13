@@ -33,13 +33,13 @@
   L01, L02, L03, L04, L05,           R00, R01, R02, R03, R04, \
   L11, L12, L13, L14, L15,           R10, R11, R12, R13, R14, \
   L21, L22, L23, L24, L25,           R20, R21, R22, R23, R24, \
-                 L30, L31, L32, R30, R31, R32 \
+                 L30, L31,           R31, R32 \
   ) \
   LAYOUT_split_3x6_3_wrapper( \
-   KC_TAB, L01, L02, L03, L04, L05,           R00, R01, R02, R03, R04, KC_BSPC, \
-  KC_GESC, L11, L12, L13, L14, L15,           R10, R11, R12, R13, R14,  KC_ENT, \
-  KC_LSFT, L21, L22, L23, L24, L25,           R20, R21, R22, R23, R24, KC_RSFT, \
-         LT(2,L30), LT(1,L31), LT(2,L32), LT(2,R30), LT(1,R31), LT(2,R32) \
+  KC_VOLU, L01, L02, L03, L04, L05,           R00, R01, R02, R03, R04, KC_MNXT, \
+  KC_MUTE, L11, L12, L13, L14, L15,           R10, R11, R12, R13, R14, KC_MPLY, \
+  KC_VOLD, L21, L22, L23, L24, L25,           R20, R21, R22, R23, R24, KC_MPRV, \
+         LT(2,L30), LT(1,L31), ZM_MUTE, ZM_VMUT, LT(1,R31), LT(2,R32) \
   )
 #define LAYOUT_split_3x6_3_base_wrapper(...)       LAYOUT_split_3x6_3_base(__VA_ARGS__)
 
@@ -81,7 +81,7 @@ K20, K21, K22, K23, K24,                         K25, K26, K27, K28, K29,\
          k31, k32,                    k36,            k39, k3a       \
 ) \
 LAYOUT_wrapper( \
-      KC_TAB, LT(2,k01), k02, k03, k04, k05, k06, k07, k08, k09, LT(2,k0a),  KC_BSPC, k0c, \
+      KC_TAB, k01, k02, k03, k04, k05, k06, k07, k08, k09, k0a,  KC_BSPC, k0c, \
      KC_GESC, k11,        k12, k13, k14, k15, k16, k17, k18, k19,       k1a,  KC_ENT,       \
      KC_LSFT, k21,          k22, k23, k24, k25, k26, k27, k28, k29,     k2a, KC_RSFT,      \
     XXX, k31, k32, XXX,      XXX,     k36,       XXX, k39, k3a, XXX  \
@@ -96,11 +96,11 @@ LAYOUT_wrapper( \
 ) \
 LAYOUT( \
 	 KC_TAB, K001, K002, K003, K004, K005,  		K006, K007, K008, K009, K010, KC_BSPC, KC_DEL, \
-	KC_GESC, K101, K102, K103, K104, K105,  		K106, K107, K108, K109, K110, KC_ENT, \
+	KC_LCTL, K101, K102, K103, K104, K105,  		K106, K107, K108, K109, K110, KC_ENT, \
 	KC_LSFT, K201, K202, K203, K204, K205,  		 XXX, K207, K208, K209, K210, K211, KC_RSFT, \
 	KC_LCTL, KC_LOPT,  	    KC_LCMD, K304,  		K306, KC_LOPT, 			   KC_LCMD, KC_LCTL \
 )
-#define LLAYOUT_prime_e_wrapper(...)       LAYOUT_prime_e_base(__VA_ARGS__)
+#define LAYOUT_prime_e_wrapper(...)       LAYOUT_prime_e_base(__VA_ARGS__)
 
 
 #define LAYOUT_hhkb_base( \
@@ -149,25 +149,7 @@ KC_LCTL,    KC_LGUI, k45, MO(2),     k48,       KC_RALT,                   KC_RC
 
 #define _____________3x5_NUM_NAV_R1________________   KC_QUOT, XXXXXXX, XXXXXXX, XXXXXXX,  KC_ENT
 #define _____________3x5_NUM_NAV_R2________________    KC_EQL, KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT
-#define _____________3x5_NUM_NAV_R3________________   KC_BSLS,  IJ_BCK,  DC_NXT,  DC_PRV,  IJ_FWD
-
-/*  Navigation */
-#define _____________3x5_____NAV_L1________________   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SCLN
-#define _____________3x5_____NAV_L2________________    KC_ESC, KC_LALT, KC_LGUI, KC_LSFT, KC_MINS
-#define _____________3x5_____NAV_L3________________   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_GRV
-
-#define _____________3x5_____NAV_R1________________   KC_QUOT, KC_HOME, KC_PGDN, KC_PGUP,  KC_END
-#define _____________3x5_____NAV_R2________________    KC_EQL, KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT
-#define _____________3x5_____NAV_R3________________   KC_BSLS,  DC_NXT,  IJ_BCK,  IJ_FWD,  DC_PRV
-
-/* Numbers */
-#define _____________3x5_____NUM_L1________________   XXXXXXX,    KC_7,    KC_8,    KC_9, KC_SCLN
-#define _____________3x5_____NUM_L2________________    KC_ESC,    KC_4,    KC_5,    KC_6, KC_MINS
-#define _____________3x5_____NUM_L3________________    KC_DOT,    KC_1,    KC_2,    KC_3,  KC_GRV
-
-#define _____________3x5_____NUM_R1________________   KC_QUOT, LSG(KC_A), LSG(KC_V), LSG(KC_S), XXXXXXX
-#define _____________3x5_____NUM_R2________________    KC_EQL, KC_LSFT, KC_LGUI, KC_LALT, CTL_ESC
-#define _____________3x5_____NUM_R3________________   KC_BSLS,  DC_NXT,  IJ_BCK,  IJ_FWD,  DC_PRV
+#define _____________3x5_NUM_NAV_R3________________   KC_BSLS, KC_HOME, KC_PGDN, KC_PGUP,  KC_END
 
 /* Symbols */
 #define _____________3x5_____SYM_L1________________     RESET, KC_VOLD, KC_MUTE, KC_VOLU, KC_COLN
@@ -176,4 +158,4 @@ KC_LCTL,    KC_LGUI, k45, MO(2),     k48,       KC_RALT,                   KC_RC
 
 #define _____________3x5_____SYM_R1________________   KC_DQUO, KC_MPRV, KC_MPLY, KC_MNXT,   RESET
 #define _____________3x5_____SYM_R2________________   KC_PLUS, KC_RPRN, KC_RBRC, KC_RCBR,   KC_GT
-#define _____________3x5_____SYM_R3________________   KC_PIPE, KC_HOME, KC_PGDN, KC_PGUP,  KC_END
+#define _____________3x5_____SYM_R3________________   KC_PIPE,  IJ_BCK,  DC_NXT,  DC_PRV,  IJ_FWD
