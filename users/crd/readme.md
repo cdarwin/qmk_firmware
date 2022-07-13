@@ -20,7 +20,7 @@ Speaking of influences, go check out [drashna's userspace](https://github.com/qm
 The only reason any of this works as well for me as is does is because of examples that he has provided to the community.
 
 Taking inspiration from [ZMK](https://zmk.dev/docs/user-setup#summary), I have chosen to include my own personalized
-[.github/workflows/build.yml] in this branch to build the board from keymaps defined here.
+[build definitions](/.github/workflows/build.yml) in this branch to build the board from keymaps defined here.
 
 Don't tell drasha, but I have also included the [kmonad](https://github.com/kmonad/kmonad) [config](./config.kbd) that I
 use when I can't build a QMK firmware for some reason. This branch would never be accepted upstream anyway so I don't
