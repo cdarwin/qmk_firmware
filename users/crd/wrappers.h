@@ -43,16 +43,30 @@
   )
 #define LAYOUT_split_3x6_3_base_wrapper(...)       LAYOUT_split_3x6_3_base(__VA_ARGS__)
 
+#define LAYOUT_atreus_base( \
+  k00, k01, k02, k03, k04,           k05, k06, k07, k08, k09, \
+  k10, k11, k12, k13, k14,           k15, k16, k17, k18, k19, \
+  k20, k21, k22, k23, k24,           k27, k28, k29, k2a, k2b, \
+                 k33, k34, k35, k36, k37, k38                 \
+) \
+  LAYOUT( \
+      k00,     k01,     k02,       k03,       k04,                             k05,       k06,     k07,     k08,     k09, \
+      k10,     k11,     k12,       k13,       k14,                             k15,       k16,     k17,     k18,     k19, \
+      k20,     k21,     k22,       k23,       k24,      XXX,       XXX,        k27,       k28,     k29,     k2a,     k2b, \
+  KC_VOLU, KC_MUTE, KC_VOLD, LT(2,k33), LT(1,k34), LT(2,k35), LT(2,k36), LT(1,k37), LT(2,k38), KC_MPRV, KC_MPLY, KC_MNXT  \
+)
+#define LAYOUT_atreus_base_wrapper(...)       LAYOUT_atreus_base(__VA_ARGS__)
+
 #define LAYOUT_kyria_base( \
     K01, K02, K03, K04, K05, K06, K07, K08, K09, K0A, \
     K11, K12, K13, K14, K15, K16, K17, K18, K19, K1A, \
     K21, K22, K23, K24, K25, K26, K27, K28, K29, K2A, \
     K31, K32, K33, K34, K35, K36 \
   ) \
-  LAYOUT_wrapper( \
-       KC_TAB, K01, K02, K03, K04, K05,                           K06, K07, K08, K09, K0A, KC_BSPC, \
-      KC_GESC, K11, K12, K13, K14, K15,                           K16, K17, K18, K19, K1A,  KC_ENT, \
-      KC_LSFT, K21, K22, K23, K24, K25, XXX, XXX, /* */ XXX, XXX, K26, K27, K28, K29, K2A, KC_RSFT, \
+  LAYOUT( \
+      KC_VOLU, K01, K02, K03, K04, K05,                           K06, K07, K08, K09, K0A, KC_MNXT, \
+      KC_MUTE, K11, K12, K13, K14, K15,                           K16, K17, K18, K19, K1A, KC_MPLY, \
+      KC_VOLD, K21, K22, K23, K24, K25, XXX, XXX, /* */ XXX, XXX, K26, K27, K28, K29, K2A, KC_MPRV, \
    KC_MPLY, XXX, LT(2,K31), LT(1,K32), LT(2,K33), /* */ LT(2,K34), LT(1,K35), LT(2,K36), XXX, KC_MUTE \
     )
 #define LAYOUT_kyria_base_wrapper(...)       LAYOUT_kyria_base(__VA_ARGS__)
