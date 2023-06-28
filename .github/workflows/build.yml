@@ -6,7 +6,7 @@ on:
       - '**.md'
 
 jobs:
-  build-cli:
+  build-crd:
     if: github.repository == 'cdarwin/qmk_firmware'
     runs-on: ubuntu-latest
     container: ghcr.io/qmk/qmk_cli
