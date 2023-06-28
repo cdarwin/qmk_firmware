@@ -23,6 +23,7 @@ jobs:
           - jd45
           - hhkb
           - charybdis
+          - atreus
 
     steps:
       - name: Disable safe.directory check
