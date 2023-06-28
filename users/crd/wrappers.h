@@ -113,7 +113,7 @@ K20, K21, K22, K23, K24,                         K25, K26, K27, K28, K29,\
 ) \
 LAYOUT_wrapper( \
       KC_TAB, k01, k02, k03, k04, k05, k06, k07, k08, k09, k0a,  KC_BSPC, k0c, \
-     KC_GESC, k11,        k12, k13, k14, k15, k16, k17, k18, k19,       k1a,  KC_ENT,       \
+     QK_GESC, k11,        k12, k13, k14, k15, k16, k17, k18, k19,       k1a,  KC_ENT,       \
      KC_LSFT, k21,          k22, k23, k24, k25, k26, k27, k28, k29,     k2a, KC_RSFT,      \
     XXX, k31, k32, XXX,      XXX,     k36,       XXX, k39, k3a, XXX  \
 )
@@ -183,10 +183,10 @@ KC_LCTL,    KC_LGUI, k45, MO(2),     k48,       KC_RALT,                   KC_RC
 #define _____________3x5_NUM_NAV_R3________________   KC_BSLS, KC_HOME, KC_PGDN, KC_PGUP,  KC_END
 
 /* Symbols */
-#define _____________3x5_____SYM_L1________________     RESET, KC_VOLD, KC_MUTE, KC_VOLU, KC_COLN
+#define _____________3x5_____SYM_L1________________    QK_RBT, KC_VOLD, KC_MUTE, KC_VOLU, KC_COLN
 #define _____________3x5_____SYM_L2________________     KC_LT, KC_LCBR, KC_LBRC, KC_LPRN, KC_UNDS
 #define _____________3x5_____SYM_L3________________   KC_LSFT, G(KC_X), G(KC_C), G(KC_V), KC_TILD
 
-#define _____________3x5_____SYM_R1________________   KC_DQUO, KC_MPRV, KC_MPLY, KC_MNXT,   RESET
+#define _____________3x5_____SYM_R1________________   KC_DQUO, KC_MPRV, KC_MPLY, KC_MNXT,  QK_RBT
 #define _____________3x5_____SYM_R2________________   KC_PLUS, KC_RPRN, KC_RBRC, KC_RCBR,   KC_GT
 #define _____________3x5_____SYM_R3________________   KC_PIPE,  IJ_BCK,  DC_NXT,  DC_PRV,  IJ_FWD
