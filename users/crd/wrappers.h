@@ -33,15 +33,17 @@
   LA0, LA1, LA2, LA3, LA4, LA5,           RA0, RA1, RA2, RA3, RA4, RA5, \
   L00, L01, L02, L03, L04, L05,           R00, R01, R02, R03, R04, R05, \
   L10, L11, L12, L13, L14, L15,           R10, R11, R12, R13, R14, R15, \
-  L20, L21, L22, L23, L24, L25,           R20, R21, R22, R23, R24, R25  \
-  ) \
+  L20, L21, L22, L23, L24, L25,           R20, R21, R22, R23, R24, R25, \
+                 L30, L31, L32,           R30, R31,                     \
+                      L40, L41,           R40 \
+    ) \
   LAYOUT_charybdis_4x6_wrapper( \
   LA0, LA1, LA2, LA3, LA4, LA5,           RA0, RA1, RA2, RA3, RA4, RA5, \
   L00, L01, L02, L03, L04, L05,           R00, R01, R02, R03, R04, R05, \
   L10, L11, L12, L13, L14, L15,           R10, R11, R12, R13, R14, R15, \
   L20, L21, L22, L23, L24, L25,           R20, R21, R22, R23, R24, R25, \
-        LT(2,KC_TAB), LT(1,KC_BSPC), LT(2,KC_TAB),  LT(2,KC_ENT), LT(1,KC_SPC),           \
-            KC_BTN2,  KC_BTN1, KC_BTN3                     \
+                 L30, L31, L32,           R30, R31,                     \
+                      L40, L41,           R40 \
   )
 #define LAYOUT_charybdis_4x6_base_wrapper(...)       LAYOUT_charybdis_4x6_base(__VA_ARGS__)
 
@@ -224,3 +226,10 @@ KC_LCTL,    KC_LGUI, k45, MO(2),     k48,       KC_RALT,                   KC_RC
 
 #define ___10u_EMPTY_ROW___ XXX, XXX, XXX, XXX, XXX, XXX, XXX, XXX, XXX, XXX
 #define ___12u_EMPTY_ROW___ XXX, ___10u_EMPTY_ROW___, XXX
+
+/* Thumbs */
+#define ___CHARYBDIS_BASE_L1___ LT(2,KC_TAB), LT(1,KC_BSPC), LT(2,KC_TAB)
+#define ___CHARYBDIS_BASE_L2___ ZM_VMUT, ZM_MUTE
+#define ___CHARYBDIS_BASE_R1___ LT(2,KC_ENT), LT(1,KC_SPC)
+#define ___CHARYBDIS_BASE_R2___ ZM_VMUT
+#define ___CHARYBDIS_BASE______ ___CHARYBDIS_BASE_L1___, ___CHARYBDIS_BASE_R1___, ___CHARYBDIS_BASE_L2___, ___CHARYBDIS_BASE_R2___
