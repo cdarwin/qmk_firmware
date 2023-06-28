@@ -39,7 +39,7 @@
   KC_VOLU, L01, L02, L03, L04, L05,           R00, R01, R02, R03, R04, KC_MNXT, \
   KC_MUTE, L11, L12, L13, L14, L15,           R10, R11, R12, R13, R14, KC_MPLY, \
   KC_VOLD, L21, L22, L23, L24, L25,           R20, R21, R22, R23, R24, KC_MPRV, \
-        DRGSCRL, LT(2,KC_TAB), LT(1,KC_BSPC),     LT(1,KC_SPC),  LT(2,KC_ENT),           \
+        LT(2,KC_TAB), LT(1,KC_BSPC), LT(2,KC_TAB),  LT(2,KC_ENT), LT(1,KC_SPC),           \
             KC_BTN2,  KC_BTN1, KC_BTN3                     \
   )
 #define LAYOUT_charybdis_4x6_base_wrapper(...)       LAYOUT_charybdis_4x6_base(__VA_ARGS__)
