@@ -35,7 +35,7 @@
   L21, L22, L23, L24, L25,           R20, R21, R22, R23, R24 \
   ) \
   LAYOUT_charybdis_4x6_wrapper( \
-  ZM_MUTE, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, ZM_VMUT, \
+  ZM_MUTE, QK_BOOT, EE_CLR, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, ZM_VMUT, \
   KC_VOLU, L01, L02, L03, L04, L05,           R00, R01, R02, R03, R04, KC_MNXT, \
   KC_MUTE, L11, L12, L13, L14, L15,           R10, R11, R12, R13, R14, KC_MPLY, \
   KC_VOLD, L21, L22, L23, L24, L25,           R20, R21, R22, R23, R24, KC_MPRV, \
@@ -182,10 +182,10 @@ KC_LCTL,    KC_LGUI, k45, MO(2),     k48,       KC_RALT,                   KC_RC
 #define _____________3x5_NUM_NAV_R3________________   KC_BSLS, KC_HOME, KC_PGDN, KC_PGUP,  KC_END
 
 /* Symbols */
-#define _____________3x5_____SYM_L1________________    QK_RBT, KC_VOLD, KC_MUTE, KC_VOLU, KC_COLN
+#define _____________3x5_____SYM_L1________________    QK_BOOT, KC_VOLD, KC_MUTE, KC_VOLU, KC_COLN
 #define _____________3x5_____SYM_L2________________     KC_LT, KC_LCBR, KC_LBRC, KC_LPRN, KC_UNDS
 #define _____________3x5_____SYM_L3________________   KC_LSFT, G(KC_X), G(KC_C), G(KC_V), KC_TILD
 
-#define _____________3x5_____SYM_R1________________   KC_DQUO, KC_MPRV, KC_MPLY, KC_MNXT,  QK_RBT
+#define _____________3x5_____SYM_R1________________   KC_DQUO, KC_MPRV, KC_MPLY, KC_MNXT, QK_BOOT
 #define _____________3x5_____SYM_R2________________   KC_PLUS, KC_RPRN, KC_RBRC, KC_RCBR,   KC_GT
 #define _____________3x5_____SYM_R3________________   KC_PIPE,  IJ_BCK,  DC_NXT,  DC_PRV,  IJ_FWD
