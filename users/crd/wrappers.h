@@ -30,15 +30,16 @@
 
 #define LAYOUT_charybdis_4x6_wrapper(...)       LAYOUT_charybdis_4x6(__VA_ARGS__)
 #define LAYOUT_charybdis_4x6_base( \
-  L01, L02, L03, L04, L05,           R00, R01, R02, R03, R04, \
-  L11, L12, L13, L14, L15,           R10, R11, R12, R13, R14, \
-  L21, L22, L23, L24, L25,           R20, R21, R22, R23, R24 \
+  LA0, LA1, LA2, LA3, LA4, LA5,           RA0, RA1, RA2, RA3, RA4, RA5, \
+  L00, L01, L02, L03, L04, L05,           R00, R01, R02, R03, R04, R05, \
+  L10, L11, L12, L13, L14, L15,           R10, R11, R12, R13, R14, R15, \
+  L20, L21, L22, L23, L24, L25,           R20, R21, R22, R23, R24, R25  \
   ) \
   LAYOUT_charybdis_4x6_wrapper( \
-  ZM_MUTE, QK_BOOT, EE_CLR, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, ZM_VMUT, \
-  KC_VOLU, L01, L02, L03, L04, L05,           R00, R01, R02, R03, R04, KC_MNXT, \
-  KC_MUTE, L11, L12, L13, L14, L15,           R10, R11, R12, R13, R14, KC_MPLY, \
-  KC_VOLD, L21, L22, L23, L24, L25,           R20, R21, R22, R23, R24, KC_MPRV, \
+  LA0, LA1, LA2, LA3, LA4, LA5,           RA0, RA1, RA2, RA3, RA4, RA5, \
+  L00, L01, L02, L03, L04, L05,           R00, R01, R02, R03, R04, R05, \
+  L10, L11, L12, L13, L14, L15,           R10, R11, R12, R13, R14, R15, \
+  L20, L21, L22, L23, L24, L25,           R20, R21, R22, R23, R24, R25  \
         LT(2,KC_TAB), LT(1,KC_BSPC), LT(2,KC_TAB),  LT(2,KC_ENT), LT(1,KC_SPC),           \
             KC_BTN2,  KC_BTN1, KC_BTN3                     \
   )
@@ -168,24 +169,58 @@ KC_LCTL,    KC_LGUI, k45, MO(2),     k48,       KC_RALT,                   KC_RC
 #define _____________3x5_QWERTY_L2_________________      KC_A,    KC_S,    KC_D,    KC_F,    KC_G
 #define _____________3x5_QWERTY_L3_________________      KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
 
+#define _____________3x6_QWERTY_L1_________________       KC_TAB, _____________3x5_QWERTY_L1_________________
+#define _____________3x6_QWERTY_L2_________________      KC_LCTL, HRML(_____________3x5_QWERTY_L2_________________)
+#define _____________3x6_QWERTY_L3_________________      KC_LSFT, _____________3x5_QWERTY_L3_________________
+
 #define _____________3x5_QWERTY_R1_________________      KC_Y,    KC_U,    KC_I,    KC_O,    LT(2,KC_P)
 #define _____________3x5_QWERTY_R2_________________      KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN
 #define _____________3x5_QWERTY_R3_________________      KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH
+
+#define _____________3x6_QWERTY_R1_________________      _____________3x5_QWERTY_R1_________________, KC_BSPC
+#define _____________3x6_QWERTY_R2_________________      HRMR(_____________3x5_QWERTY_R2_________________), KC_ENT
+#define _____________3x6_QWERTY_R3_________________      _____________3x5_QWERTY_R3_________________, KC_RSFT
 
 /*  Numbers & Navigation */
 #define _____________3x5_NUM_NAV_L1________________    KC_TAB,    KC_7,    KC_8,    KC_9, KC_SCLN
 #define _____________3x5_NUM_NAV_L2________________    KC_ESC,    KC_4,    KC_5,    KC_6, KC_MINS
 #define _____________3x5_NUM_NAV_L3________________      KC_0,    KC_1,    KC_2,    KC_3,  KC_GRV
 
+#define _____________3x6_NUM_NAV_L1________________    KC_VOLU, _____________3x5_NUM_NAV_L1________________
+#define _____________3x6_NUM_NAV_L2________________    KC_MUTE, HRML(_____________3x5_NUM_NAV_L2________________)
+#define _____________3x6_NUM_NAV_L3________________    KC_VOLD, _____________3x5_NUM_NAV_L3________________
+
 #define _____________3x5_NUM_NAV_R1________________   KC_QUOT, XXXXXXX, XXXXXXX, XXXXXXX,  KC_ENT
 #define _____________3x5_NUM_NAV_R2________________    KC_EQL, KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT
 #define _____________3x5_NUM_NAV_R3________________   KC_BSLS, KC_HOME, KC_PGDN, KC_PGUP,  KC_END
+
+#define _____________3x6_NUM_NAV_R1________________   _____________3x5_NUM_NAV_R1________________, KC_MNXT
+#define _____________3x6_NUM_NAV_R2________________   HRMR(_____________3x5_NUM_NAV_R2________________), KC_MUTE
+#define _____________3x6_NUM_NAV_R3________________   _____________3x5_NUM_NAV_R3________________, KC_MPRV
 
 /* Symbols */
 #define _____________3x5_____SYM_L1________________    QK_BOOT, KC_VOLD, KC_MUTE, KC_VOLU, KC_COLN
 #define _____________3x5_____SYM_L2________________     KC_LT, KC_LCBR, KC_LBRC, KC_LPRN, KC_UNDS
 #define _____________3x5_____SYM_L3________________   KC_LSFT, G(KC_X), G(KC_C), G(KC_V), KC_TILD
 
+#define _____________3x6_____SYM_L1________________   RGB_MOD, _____________3x5_____SYM_L1________________
+#define _____________3x6_____SYM_L2________________   RGB_TOG, _____________3x5_____SYM_L2________________
+#define _____________3x6_____SYM_L3________________   RGB_RMOD, _____________3x5_____SYM_L3________________
+
 #define _____________3x5_____SYM_R1________________   KC_DQUO, KC_MPRV, KC_MPLY, KC_MNXT, QK_BOOT
 #define _____________3x5_____SYM_R2________________   KC_PLUS, KC_RPRN, KC_RBRC, KC_RCBR,   KC_GT
 #define _____________3x5_____SYM_R3________________   KC_PIPE,  IJ_BCK,  DC_NXT,  DC_PRV,  IJ_FWD
+
+#define _____________3x6_____SYM_R1________________   _____________3x5_____SYM_R1________________, XXX
+#define _____________3x6_____SYM_R2________________   _____________3x5_____SYM_R2________________, XXX
+#define _____________3x6_____SYM_R3________________   _____________3x5_____SYM_R3________________, XXX
+
+/* Number Rows */
+#define ___10u_NUM_ROW___ KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0
+#define ___12u_NUM_ROW___ KC_ESC, ___10u_NUM_ROW___, KC_BSPC
+
+#define ___10u_FUN_ROW___ KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10
+#define ___12u_FUN_ROW___ KC_F11, ___10u_FUN_ROW___, KC_F12
+
+#define ___10u_EMPTY_ROW___ XXX, XXX, XXX, XXX, XXX, XXX, XXX, XXX, XXX, XXX
+#define ___12u_EMPTY_ROW___ XXX, ___10u_EMPTY_ROW___, XXX
