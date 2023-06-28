@@ -35,10 +35,7 @@ jobs:
 
       - name: Build
         id: build
-        run: |
-          TARGET="${{ matrix.keymap }}"
-
-          qmk compile -c users/crd/keymaps/${TARGET}.json
+        run: qmk compile -c users/crd/keymaps/${{ matrix.keymap }}.json
 
       - name: Archive artifacts
         uses: actions/upload-artifact@v2
