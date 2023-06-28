@@ -1,12 +1,15 @@
 name: Build firmware for keyboards
 on:
   push:
+    branches: [crd/actions]
     paths-ignore:
       - '**.md'
 
 jobs:
   build-cli:
+    if: github.repository == 'cdarwin/qmk_firmware'
     runs-on: ubuntu-latest
+    container: ghcr.io/qmk/qmk_cli
     strategy:
       fail-fast: false
       matrix:
@@ -22,35 +25,27 @@ jobs:
           - charybdis
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Disable safe.directory check
+        run : git config --global --add safe.directory '*'
+
+      - uses: actions/checkout@v3
         with:
-          fetch-depth: 1
-          persist-credentials: false
-          submodules: true
+          submodules: recursive
+          ref: ${{ github.event.inputs.branch || github.ref }}
 
       - name: Setup
         id: setup
         run: |
           TARGET="${{ matrix.keymap }}"
 
-          docker run --rm \
-            -w /qmk_firmware \
-            -v $PWD:/qmk_firmware \
-            -e ALT_GET_KEYBOARDS=true \
-            qmkfm/qmk_cli \
-            /usr/local/bin/qmk setup
+          qmk setup
 
       - name: Build
         id: build
         run: |
           TARGET="${{ matrix.keymap }}"
 
-          docker run --rm \
-            -w /qmk_firmware \
-            -v $PWD:/qmk_firmware \
-            -e ALT_GET_KEYBOARDS=true \
-            qmkfm/qmk_cli \
-            /usr/local/bin/qmk compile -c users/crd/keymaps/${TARGET}.json
+          qmk compile -c users/crd/keymaps/${TARGET}.json
 
           echo ::set-output name=artifact-name::${TARGET//[:<>|*?\\\/]/_}
           echo "Artifact-name: ${{ steps.build.outputs.artifact-name }}"
