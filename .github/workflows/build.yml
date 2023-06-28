@@ -50,6 +50,7 @@ jobs:
       - name: Archive artifacts
         uses: actions/upload-artifact@v2
         with:
+          name: ${{ matrix.keymap }}
           path: |
             *.hex
             *.bin
