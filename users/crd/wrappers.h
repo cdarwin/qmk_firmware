@@ -213,9 +213,9 @@ KC_LCTL,    KC_LGUI, k45, MO(2),     k48,       KC_RALT,                   KC_RC
 #define _____________3x5_____SYM_R2________________   KC_PLUS, KC_RPRN, KC_RBRC, KC_RCBR,   KC_GT
 #define _____________3x5_____SYM_R3________________   KC_PIPE,  IJ_BCK,  DC_NXT,  DC_PRV,  IJ_FWD
 
-#define _____________3x6_____SYM_R1________________   _____________3x5_____SYM_R1________________, XXX
+#define _____________3x6_____SYM_R1________________   _____________3x5_____SYM_R1________________, DPI_MOD
 #define _____________3x6_____SYM_R2________________   _____________3x5_____SYM_R2________________, XXX
-#define _____________3x6_____SYM_R3________________   _____________3x5_____SYM_R3________________, XXX
+#define _____________3x6_____SYM_R3________________   _____________3x5_____SYM_R3________________, S_D_MOD
 
 /* Number Rows */
 #define ___10u_NUM_ROW___ KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0
@@ -233,3 +233,9 @@ KC_LCTL,    KC_LGUI, k45, MO(2),     k48,       KC_RALT,                   KC_RC
 #define ___CHARYBDIS_BASE_R1___ LT(2,KC_ENT), LT(1,KC_SPC)
 #define ___CHARYBDIS_BASE_R2___ ZM_VMUT
 #define ___CHARYBDIS_BASE______ ___CHARYBDIS_BASE_L1___, ___CHARYBDIS_BASE_R1___, ___CHARYBDIS_BASE_L2___, ___CHARYBDIS_BASE_R2___
+
+#define ___CHARYBDIS_MOUSE_L1___ KC_BTN2, KC_BTN1, KC_BTN3
+#define ___CHARYBDIS_MOUSE_L2___ XXXXXXX, KC_BTN2
+#define ___CHARYBDIS_MOUSE_R1___ KC_BTN3, KC_BTN1
+#define ___CHARYBDIS_MOUSE_R2___ KC_BTN2
+#define ___CHARYBDIS_MOUSE______ ___CHARYBDIS_MOUSE_L1___, ___CHARYBDIS_MOUSE_R1___, ___CHARYBDIS_MOUSE_L2___, ___CHARYBDIS_MOUSE_R2___

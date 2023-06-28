@@ -4,7 +4,7 @@
 
 #if defined(KEYBOARD_bastardkb_charybdis_4x6)
 #   define POINTING_DEVICE_AUTO_MOUSE_ENABLE
-#   define AUTO_MOUSE_DEFAULT_LAYER 3
+#   define AUTO_MOUSE_DEFAULT_LAYER 2
 #endif
 
 #if defined(SPLIT_KEYBOARD)
