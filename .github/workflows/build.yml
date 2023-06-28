@@ -33,13 +33,6 @@ jobs:
           submodules: recursive
           ref: ${{ github.event.inputs.branch || github.ref }}
 
-      - name: Setup
-        id: setup
-        run: |
-          TARGET="${{ matrix.keymap }}"
-
-          qmk setup
-
       - name: Build
         id: build
         run: |
