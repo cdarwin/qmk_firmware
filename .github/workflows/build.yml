@@ -19,6 +19,7 @@ jobs:
           - dacmani
           - jd45
           - hhkb
+          - charybdis
 
     steps:
       - uses: actions/checkout@v2
