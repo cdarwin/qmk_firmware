@@ -46,3 +46,30 @@ jobs:
             *.bin
             *.uf2
         continue-on-error: true
+  build-via:
+    if: github.repository == 'cdarwin/qmk_firmware'
+    runs-on: ubuntu-latest
+    container: ghcr.io/qmk/qmk_cli
+
+    steps:
+      - name: Disable safe.directory check
+        run : git config --global --add safe.directory '*'
+
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          ref: ${{ github.event.inputs.branch || github.ref }}
+
+      - name: Build
+        id: build
+        run: qmk compile -kb bastardkb/charybdis/4x6/v2/splinky_3 -km via
+
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: charybdis-via
+          path: |
+            *.hex
+            *.bin
+            *.uf2
+        continue-on-error: true
