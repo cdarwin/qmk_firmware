@@ -197,7 +197,7 @@ KC_LCTL,    KC_LGUI, k45, MO(2),     k48,       KC_RALT,                   KC_RC
 #define _____________3x5_NUM_NAV_R3________________   KC_BSLS, KC_HOME, KC_PGDN, KC_PGUP,  KC_END
 
 #define _____________3x6_NUM_NAV_R1________________   _____________3x5_NUM_NAV_R1________________, KC_MNXT
-#define _____________3x6_NUM_NAV_R2________________   HRMR(_____________3x5_NUM_NAV_R2________________), KC_MUTE
+#define _____________3x6_NUM_NAV_R2________________   HRMR(_____________3x5_NUM_NAV_R2________________), KC_MPLY
 #define _____________3x6_NUM_NAV_R3________________   _____________3x5_NUM_NAV_R3________________, KC_MPRV
 
 /* Symbols */
